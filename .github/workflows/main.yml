@@ -13,5 +13,5 @@ jobs:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.10.0
       - name: Check Cluster
-        run: kubectl cluster-info --context kind-kind
+        run: kubectl cluster-info --context chart-testing
       
