@@ -12,10 +12,5 @@ jobs:
     steps:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.10.0
-      - name: Information about nodes
-        run: kubectl get nodes
-        
-      - name: Version of Cluster
-        run: kubectl version
-
-      
+      - run: kubectl get nodes  
+      - run: kubectl version
