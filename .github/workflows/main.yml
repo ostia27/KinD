@@ -1,4 +1,4 @@
-name: Create Cluster
+name: KinD Cluster
 
 on:
   push:
@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.10.0
-      - name: Check Cluster
-        run: kubectl cluster-info --context chart-testing
+      - name: Information about nodes
+        run: kubectl get nodes
+        
+      - name: Version of Cluster
+        run: kubectl version
+
       
