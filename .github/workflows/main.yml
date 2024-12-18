@@ -12,4 +12,6 @@ jobs:
     steps:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.10.0
+        with:
+          node_image: hello-world
       
